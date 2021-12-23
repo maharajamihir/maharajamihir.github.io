@@ -2,22 +2,23 @@
         const canvas = document.getElementById("hero-lightpass");
         const context = canvas.getContext("2d");
 
-        canvas.width=1158;
-        canvas.height=770;
+        canvas.width=2000;
+        canvas.height=1000;
 
 
         // Preloading images to drastically improve performance
         //const currentFrame = index => (`https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`);
-
-        const currentFrame = index => (`img2/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`);
-        const frameCount = 17; // There 148 images for that animation-sequence to load
+        //shaun the sheep
+        //const currentFrame = index => (`img2/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`);
+        const currentFrame = index => (`eye/frame_${index.toString().padStart(2, '0')}_delay-0.1s.gif`);
+        //const frameCount = 17; // There 17 images for that animation-sequence to load
+        const frameCount = 29
         const images = [];
 
         const preloadImages = () => {
             for (let i = 1; i < frameCount; i++) {
                 images[i] = new Image(); // This is functionally equivalent to document.createElement('img').
                 images[i].src = currentFrame(i);
-                images[i].width = 700;
             }
         };
 
@@ -28,7 +29,7 @@
         const img = new Image();
         img.src = currentFrame(1);
         img.onload = function(){
-            context.drawImage(img, 0, 0);
+            context.drawImage(img, 0, 0, 2000, 1000);
         }
 
 
@@ -48,6 +49,6 @@
             );
             // console.log('FrameIndex', frameIndex);
 
-            requestAnimationFrame(() => context.drawImage(images[frameIndex + 1], 0, 0));
+            requestAnimationFrame(() => context.drawImage(images[frameIndex + 1], 0, 0, 2000, 1000));
 
         });
