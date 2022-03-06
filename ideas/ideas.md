@@ -19,7 +19,6 @@
 - Sexism extension
 - Summarize Meetings with AI
 - BoozeUp
-- HangMap
 - make brif community based
 - Personal Therapist
   - Personalized AI based friend who can talk with a lonely person and entertain based on sentiment analysis and past experience.
@@ -49,6 +48,12 @@
 	- Connects you with experts on this skill
 	- In exchange you also assist other people in skills where you are an expert in
 	- Earn Karma-Points by helping others 
+	- Links:
+		- https://www.lifesprint.me/
+		- https://www.coursera.org/
+		- Duolingo.
+		- Khan Academy.
+		- LinkedIn Learning.
 
 - Service Freelancer portal like Upwork but for any Task
 	- Tasks like "Build my Cupboard", "Mow my lawn", "Fix my laptop"
@@ -67,8 +72,11 @@
 
 # Personal stuff
 - community based cooking website
+
 # CS stuff
 - write own programming language
 - write own OS
 - write neural network from scratch
 - write graph algorithms from GKI on MVG net 
+- Game theory concepts simulation (evolution, natural selection, auctions, elections)
+- Open book exam helper AI, take AI from huggingface, write parser for pdf documents or slides for textual inputs and then let user ask questions or multiple choice mode
