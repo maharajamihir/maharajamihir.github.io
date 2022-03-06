@@ -62,7 +62,7 @@
 
 - write story from short bullet points (feature create it from your sentiment)
 - pass on personal thoughts, experience to right people
-
+- Open book exam helper AI, take AI from huggingface, write parser for pdf documents or slides for textual inputs and then let user ask questions or multiple choice mode
 	
 # Finance 
 - Stockmarket bot AI
@@ -79,4 +79,3 @@
 - write neural network from scratch
 - write graph algorithms from GKI on MVG net 
 - Game theory concepts simulation (evolution, natural selection, auctions, elections)
-- Open book exam helper AI, take AI from huggingface, write parser for pdf documents or slides for textual inputs and then let user ask questions or multiple choice mode
