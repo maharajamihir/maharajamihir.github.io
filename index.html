@@ -24,6 +24,10 @@
   img {
     max-width: 100%;
     height: auto;
+    transition: opacity 0.3s ease;
+  }
+  img:hover {
+    opacity: 0.7;
   }
 </style>
 </head>
@@ -74,8 +78,32 @@
     </p>
   </div>
   <div class="image-container">
-    <img src="image.png" alt="Mihir Mahajan">
+    <img id="randomImage" alt="Mihir Mahajan">
   </div>
 </div>
+
+<script>
+  const images = ['image1.png', 'image2.png'];
+  const imgElement = document.getElementById('randomImage');
+
+  function setRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+  }
+
+  function changeImage() {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * images.length);
+    } while (images[newIndex] === imgElement.src);
+    imgElement.src = images[newIndex];
+  }
+
+  // Set initial random image
+  setRandomImage();
+
+  // Change image on hover
+  imgElement.addEventListener('mouseenter', changeImage);
+</script>
 </body>
 </html>
