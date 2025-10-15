@@ -8,20 +8,20 @@
     margin: 0;
     padding: 0;
     font-family: monospace;
-    font-size: 20px; /* Increase the base font size */
+    font-size: 15px; /* Increase the base font size */
   }
   .container {
     display: flex;
     padding-top: 5%;
     padding-left: 12%;
     padding-right: 12%;
-    cursor: url('./logo-pdoom.png'), auto;
+    flex-direction: row; /* Explicitly set for desktop */
   }
   .content {
     flex: 1;
   }
   .image-container {
-    width: 400px; /* Increase the width of the image container */
+    width: 200px; /* Increase the width of the image container */
     margin-left: 20px;
   }
   img {
@@ -29,11 +29,41 @@
     height: auto;
     transition: opacity 0.3s ease;
   }
-  img:hover {
-    opacity: 0.7;
-  }
   a {
     color: rgb(8, 119, 166); /* Change the color of URLs to pink */
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 3%;
+    }
+    .image-container {
+      width: 150px;
+      margin-left: 0;
+      margin-top: 20px;
+      align-self: center;
+    }
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+    .image-container {
+      width: 120px;
+    }
+    body {
+      font-size: 13px;
+    }
   }
 </style>
 
@@ -59,20 +89,33 @@
     </p>
     <h2>highlights</h2>
     <p>
-     [2024] joined <a href="https://www.joinef.com/posts/introducing-def-acc-at-ef/">def/acc</a>
+     [2025] built scalable world modeling codebase: <a href="https://github.com/p-doom/jasmine">code</a> 
+     <a href="./coming_soon.html">paper</a>
+     <a href="./coming_soon.html">dataset</a> 
+     <a href="https://x.com/prob_doom/status/1952878793107947781">tweet</a> 
+     <a href="https://pdoom.org/jasmine.html">blog</a> 
+     <a href="https://www.cit.tum.de/en/cit/news/article/codebase-video-action-model/">article</a>
     </p>
     <p>
-     [2024] "MeshFeat: Multi-Resolution Features for Neural Fields on Meshes" got accepted at ECCV 2024:
-    <a href="https://maharajamihir.github.io/MeshFeat">project page</a>
-    <a href="https://arxiv.org/abs/2407.13592">pdf</a>
+     [2025] released <a href="https://pdoom.org/crowd_code.html">crowd-code</a>, a vs-code/cursor extension to crowd-source a SWE dataset
+    </p>
+    <p>
+     [2024] went through <a href="https://www.joinef.com/posts/introducing-def-acc-at-ef/">def/acc</a>
+    </p>
+    <p>
+     [2024] published my bachelor thesis at ECCV 2024:
+    <a href="https://maharajamihir.github.io/MeshFeat">project page</a> 
+    <a href="https://arxiv.org/abs/2407.13592">pdf</a> 
+    <a href="https://github.com/maharajamihir/MeshFeat/">code</a> 
     <a href="https://x.com/maharajamihir/status/1811530075784826910">tldr</a>
+    <a href="https://www.cit.tum.de/en/cit/news/article/codebase-video-action-model/">article</a>
     </p>
     <p>
      [2024] graduated from technical university of munich with a bachelors in cs
     </p>
     <p>
-     [2023] explored how to use code generation capabilities of LLMs to interact with databases:
-    <a href="https://github.com/aws-samples/amazon-sagemaker-generativeai/blob/main/usecases/text_to_sql/text2sql.ipynb">notebook</a>
+     [2023] released a public demo during my internship at aws:
+    <a href="https://github.com/aws-samples/amazon-sagemaker-generativeai/tree/main/6_use_cases/usecases/text_to_sql">notebook</a>
     </p>
     <p>
      [2023] our thoughts on the adaptive compute transformer:
@@ -87,7 +130,7 @@
     </p>
   </div>
   <div class="image-container">
-    <img src="image.jpg" alt="Mihir Mahajan">
+    <img src="perso.jpg" alt="Mihir Mahajan">
   </div>
 </div>
 </body>
